@@ -1,0 +1,510 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap'); 
+
+:root{
+    --primary: #2175f5;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #efefef;
+}
+
+
+
+.container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 860px;
+}
+
+.shoeBackground{
+    position: relative;
+    width: 50%;
+    height:475px ;
+    box-shadow: -15px 0 35px rgba(0, 0 , 0, 0.1), 0 -15px 35px rgba(0, 0 , 0, 0.1),
+    0 15px 35px rgba(0, 0 , 0, 0.1);
+    transition: 0.5s;
+
+}
+
+.gradients{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.gradient{
+    position: absolute;
+    z-index: -2;
+    height: 100%;
+    width:100%;
+    left: 0;
+    top: 0;
+}
+
+.first{
+    z-index: 0;
+    animation: 1s width ease;
+
+}
+
+@keyframes width{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+.second{
+    z-index: -1;
+}
+
+.gradient[color="blue"]{
+    background-image: linear-gradient(45deg, #0136af, #22abfa);
+    width: 100%;
+    z-index: 0;
+}
+
+.gradient[color="red"]{
+    background-image: linear-gradient(45deg, #d62926, #ee625f);
+    
+}
+.gradient[color="green"]{
+    background-image: linear-gradient(45deg, #11998e, #1ce669);
+}
+.gradient[color="orange"]{
+    background-image: linear-gradient(45deg,#fc4a1a, #f7b733 );
+}
+.gradient[color="black"]{
+    background-image: linear-gradient(45deg, #111, #666);
+}
+
+.logo{
+    position: absolute;
+    width: 100px;
+    top: 20px;
+    left: 20px;
+}
+
+.share{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #fff;
+    color: var(--primary);
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+
+
+.nike{
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 12rem;
+    color: hsla(0, 0%, 100%, 0.119);
+    margin-top: 0.8rem;
+
+}
+
+.shoe {
+    position: absolute;
+    width: 140%;
+    opacity: 0;
+    bottom: 0;
+    right: 0;
+    transform: rotate(-20deg);
+    transition: 0.5s;
+}
+
+.shoe.show{
+
+    opacity: 1;
+}
+
+.info{
+    position: relative;
+    width: 50%;
+    height: 550px;
+    background-color: #fff;
+    box-shadow: -15px 0 35px rgba(0, 0 , 0, 0.1), 0 -15px 35px rgba(0, 0 , 0, 0.1),
+    0 15px 35px rgba(0, 0 , 0, 0.1);
+    padding: 2rem;
+    display: grid;
+    z-index: 1;
+}
+
+.shoeName {
+    position: relative;
+    display: inline-block;
+}
+
+.shoeName h1{
+    position: absolute;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.shoeName .new{
+    
+    position: absolute;
+    width: 55px;
+    height: 28px;
+    top: calc(50% - 2px);
+    right: 45px;
+    background-color: var(--primary);
+    color: #fff;
+    border-radius: 5px;
+}
+
+.new span{
+    position: relative;
+    text-transform: uppercase;
+    top: 3px;
+    left: 3px;
+    padding: 0 0.3rem;
+    
+}
+
+.small{
+    padding-top: 1rem;
+    font-size: 1.1rem;
+    border-bottom: 2px solid var(--primary);
+    height: 75%;
+}
+
+.description{
+
+    border-bottom: 2px solid var(--primary);
+    height: 90%;
+}
+
+.description h3{
+
+    position: relative;
+    height: 25%;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+
+}
+
+.description .text{
+
+    font-size: 1rem;
+    font-weight: 10;
+    color: #00000098;
+    
+}
+
+.color-container .title{
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    
+
+}
+
+.color-container{
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--primary);
+}
+
+
+.colors{
+
+    margin: 0.5rem 0.5rem;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    gap: 1.2rem;
+
+}
+
+.color{
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 5px solid;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.color[color="blue"]{
+    
+    background-color:#2175f5 ;
+    border-color:#2175f5 ;
+}
+.color[color="red"]{
+    background-color: #f84848;
+    border-color: #f84848;
+}
+.color[color="green"]{
+    background-color: #29b864;
+    border-color: #29b864;
+}
+
+.color[color="orange"]{
+    background-color: #ff5521;
+    border-color: #ff5521;
+}
+
+.color[color="black"]{
+    background-color: #444;
+    border-color: #444;
+}
+
+.color.active{
+    border-color: #fff;
+    box-shadow: 0 0 10px .5px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+}
+
+
+.size-container{
+    padding: 1rem 0 2rem 0;
+    border-bottom: 2px solid var(--primary);
+}
+
+.size-container .title{
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+.sizes{
+    margin: 0.5rem 0.5rem;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    font-size: 1rem;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.sizes span{
+
+    position: relative;
+    top: 5px;
+}
+
+.size{
+    height:33px ;
+    width: 33px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #eee;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.size.active{
+    background-color: var(--primary);
+    color: #fff;
+    transition: 0.5s;
+}
+
+
+
+.buy-price{
+    position: relative;
+    display: flex;
+    white-space: nowrap;
+    gap: 3rem;
+    padding-top: 0.5rem;
+}
+    
+    
+.buy{
+    position: relative;
+    
+    transform: translateY(50%);
+    width: 150px;
+    height: 50px;
+}
+
+.buy a{
+    
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 1rem;
+    background-color: var(--primary);
+    border-radius: 15px;
+    color: #fff;
+}
+
+
+.buy-price .price{
+    position: relative;
+    display: flex;
+    margin: 1rem;
+    gap: 2px;
+
+}
+
+.price svg{
+    font-size: 1.5rem;
+    
+}
+
+@media (max-width: 1070px){
+    .shoe{
+        width: 135%;
+    }
+}
+
+@media (max-width: 1000px){
+    .card{
+        flex-direction: column;
+        width: 100%;
+        box-shadow: 0 0 35px 1px rgba(0, 0, 0, 0.2);
+    }
+    
+    .card > div{
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .shoe{
+        width: 100%;
+        transform: rotate(-5deg) translateY(-50%);
+        top: 55%;
+        right: 2%;
+    }
+
+    .nike{
+        top: 20%;
+        left: 5%;
+    }
+}
+
+@media (max-width: 600px){
+    .share{
+        width: 40px;
+        height: 40px;
+    }
+
+    .share i {
+        font-size: 1rem;
+        line-height: 40px;
+    }
+
+    .logo{
+        width: 70px;
+    }
+}
+
+@media (max-width: 490px){
+    .nike{
+        font-size: 7rem;
+    }
+
+    .shoeName div .big{
+        font-size: 1.3rem;
+    }
+
+    .small{
+        font-size: 1rem;
+    }
+
+    .new{
+        padding: 2px 6px;
+        font-size: .9rem;
+    }
+
+    .title{
+        font-size: .9rem;
+    }
+
+    .text{
+        font-size: .8rem;
+    }
+
+    .buy{
+        padding: .5rem .8rem;
+        font-size: .8rem;
+    }
+
+    .price h1{
+        font-size: 1.5rem;
+    }
+
+    .price i{
+        font-size: .9rem;
+    }
+
+    .size{
+        width: 30px;
+        height: 30px;
+        margin: 0 8px;
+        font-size: .9rem;
+        line-height: 30px;
+    }
+
+    .color{
+        margin: 0 6px;
+        width: 0 20px;
+        width: 20px;
+        height: 20px;
+        border-width: 4px;
+    }
+
+    .share{
+        width: 35px;
+        height: 35px;
+        top: 10px;
+        right: 10px;
+    }
+
+    .share i{
+        font-size: .8rem;
+        line-height: 35px;
+    }
+
+    .logo{
+        width: 60px;
+        top: 10px;
+        left: 10px;
+    }
+
+    .info{
+        padding: 20px;
+    }
+}
+
+@media (max-width: 400px){
+    .buy i{
+        display: none;
+    }
+
+    .container{
+        padding: 20px;
+    }
+}
+
+
+
+
+
+
+
+
